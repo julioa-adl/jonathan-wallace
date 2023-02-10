@@ -1,0 +1,32 @@
+@import '../abstract/variaveis';
+
+.my-topBar {
+  background-color: $cor-primaria;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 5px 10vw;
+  z-index: 1;
+  div {
+    display: flex;
+    align-items: center;
+    font-family: $font;
+    font-size: $tamanho-do-texto / 3;
+    gap: 5px;
+    color: white;
+    p {
+      // height: 100%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .my-topBar {
+    padding: 0;
+    div {
+      display: none;
+    }
+  }
+}

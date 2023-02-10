@@ -1,0 +1,74 @@
+@import '../abstract/variaveis';
+
+.about-me {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  width: 80%;
+  margin: 0 10%;
+  div {
+    width: 50%;
+  }
+  .img-aboutme {
+    animation: slide-left-in 2s forwards;
+    transition: transform 0.3s ease;
+    img {
+      width: 100%;
+    }
+  }
+  .txt-aboutme {
+    animation: slide-right-in 2s forwards;
+    transition: transform 0.3s ease;
+    padding: 0 20px;
+    h2 {
+      font-family: $font;
+      font-weight: $sb;
+      color: $cor-primaria;
+    }
+    p {
+      font-family: $font;
+      font-weight: $rg;
+      color: $cor-primaria;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .about-me {
+    flex-direction: column;
+    justify-content: center;
+    div {
+      width: 100%;
+    }
+    .txt-aboutme {
+      padding: 0 20px;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes slide-left-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right-in {
+  from {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,92 @@
+@import '../abstract/variaveis';
+
+.card-header {
+  position: absolute;
+  animation: card-slide-in-up 2s forwards;
+  transition: transform 0.3s ease;
+  background-color: $cor-primaria;
+  width: 80%;
+  margin: 0 10%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  div {
+    h1 {
+      font-family: $font;
+      font-size: $tamanho-do-texto - 1;
+      font-weight: $b;
+      color: $cor-branca;
+      margin: 0;
+    }
+  }
+  .card-icon {
+    padding: 10px;
+    border-radius: 10px;
+    img {
+      width: 100px;
+    }
+  }
+  .lampada {
+    background-color: $cor-secundaria;
+  }
+  .torneira {
+    background-color: $cor-terc-blue;
+  }
+  .manutencao {
+    background-color: $cor-terc-red;
+  }
+  .pintura {
+    background-color: $cor-terc-green;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .card-header {
+    height: 6rem;
+    div {
+      h1 {
+        font-size: $tamanho-do-texto / 2.5;
+        font-weight: $sb;
+      }
+    }
+    .card-icon {
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .card-header {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    height: 5rem;
+    div {
+      h1 {
+        font-size: $tamanho-do-texto / 3;
+      }
+    }
+    .card-icon {
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+@keyframes card-slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
