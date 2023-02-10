@@ -3,20 +3,53 @@
 .about-me {
   display: flex;
   height: 100vh;
+  min-height: 1000px;
   align-items: center;
   width: 80%;
   margin: 0 10%;
+  padding: 100px 0;
   div {
     width: 50%;
   }
   .img-aboutme {
     animation: slide-left-in 2s forwards;
     transition: transform 0.3s ease;
+    position: relative;
     img {
       width: 100%;
     }
+    .quadradinho {
+      height: 6%;
+      width: 6%;
+      position: absolute;
+      border-radius: 20%;
+      transform: rotate(45deg);
+      opacity: 0.8;
+    }
+    .q-vermelho {
+      top: 10%;
+      height: 7%;
+      width: 7%;
+      background-color: $cor-terc-red;
+    }
+    .q-azul {
+      top: 20%;
+      left: 75%;
+      background-color: $cor-terc-blue;
+    }
+    .q-amarelo {
+      top: 70%;
+      left: -28%;
+      height: 7%;
+      width: 7%;
+      background-color: $cor-secundaria;
+    }
   }
   .txt-aboutme {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-evenly;
     animation: slide-right-in 2s forwards;
     transition: transform 0.3s ease;
     padding: 0 20px;
@@ -30,6 +63,18 @@
       font-weight: $rg;
       color: $cor-primaria;
     }
+    .btn-saber-mais {
+      width: 150px;
+      background-color: $cor-secundaria;
+      border: $cor-secundaria solid 1px;
+      color: $cor-primaria;
+      font-family: $font;
+      font-weight: $b;
+      &:hover {
+        background-color: $cor-branca;
+        font-weight: $rg !important;
+    }
+    }
   }
 }
 
@@ -39,6 +84,11 @@
     justify-content: center;
     div {
       width: 100%;
+    }
+    .img-aboutme {
+      .q-amarelo {
+        left: -15%;
+      }
     }
     .txt-aboutme {
       padding: 0 20px;
