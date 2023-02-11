@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import useWindowSize from '../hooks/useWindowSize';
+import useWindowScroll from '../hooks/useWindowScroll';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,11 +11,30 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import logo from '../images/logo.png'
+import logo from '../images/logo.png';
 
 function NavBar() {
+  const [positionNav, setPositionNav] = useState('');
+
+  const size = useWindowSize();
+  const position = useWindowScroll();
+
+  useEffect(() => {
+    if (position > size.height * 0.75) {
+      setPositionNav('top');
+    } else {
+      setPositionNav('');
+    }
+  }, [position, size]);
+
   return (
-    <Navbar key={'lg'} bg="light" expand={'lg'} className="mb-3 mt-3 navbar">
+    <Navbar
+      fixed={ positionNav }
+      key={'lg'}
+      bg="light"
+      expand={'lg'}
+      className="mb-3 mt-3 navbar"
+    >
       <Container fluid>
         <Nav className="justify-content-start flex-grow-1">
           <Navbar.Brand href="#">
