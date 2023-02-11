@@ -7,7 +7,7 @@
   align-items: center;
   width: 80%;
   margin: 0 10%;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   div {
     width: 50%;
   }
@@ -75,7 +75,7 @@
       border: $cor-secundaria solid 1px;
       color: $cor-primaria;
       font-family: $font;
-      font-weight: $b;
+      font-weight: $md;
       &:hover {
         background-color: $cor-branca;
         font-weight: $rg !important;
@@ -88,6 +88,7 @@
   .about-me {
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 40px;
     height: 100%;
     div {
       width: 100%;

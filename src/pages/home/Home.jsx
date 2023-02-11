@@ -1,4 +1,5 @@
 import React from 'react';
+import FaleConosco from '../../components/FaleConosco';
 import Header from '../../components/Header';
 
 import bgHeaderHome from '../../images/bg-header-home.webp'
@@ -18,6 +19,9 @@ function Home() {
       <CardHeader/>
       <AboutMe/>
       <ServicesHome/>
+      <section className='section-home-bottom'>
+        <FaleConosco/>
+      </section>
     </div>
   )
 }

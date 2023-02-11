@@ -1,0 +1,54 @@
+@import '../abstract/variaveis';
+
+.fale-conosco {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  margin: 50px 0;
+  padding: 0 10%;
+  h1 {
+    font-family: $font;
+    font-size: $tamanho-do-texto - 1;
+    font-weight: $rg;
+    color: #000000;
+    strong {
+      font-weight: $sb;
+    }
+  }
+  .btn-fale-conosco {
+      width: 200px;
+      background-color: $cor-primaria;
+      border: $cor-primaria solid 1px;
+      color: $cor-branca;
+      font-family: $font;
+      font-weight: $md;
+      &:hover {
+        background-color: $cor-branca;
+        color: $cor-primaria;
+        font-weight: $rg !important;
+    }
+  }
+}
+
+@media screen and (max-width: $xl) {
+  .fale-conosco {
+    h1 {
+      font-size: $tamanho-do-texto - 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .fale-conosco {
+    height: 20vh;
+    padding: 20px 0;
+    flex-direction: column;
+    h1 {
+      font-size: $tamanho-do-texto - 2;
+    }
+  }
+}

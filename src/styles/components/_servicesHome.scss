@@ -21,7 +21,7 @@
     margin: 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     div {
       .capa-card-serv-home-container {
         overflow: hidden;
@@ -66,9 +66,8 @@
             text-align: left;
             margin-left: 10%;
           }
-          &:hover h1,
-          &:hover p{
-            color: $cor-terc-red;
+          &:hover h1 {
+            color: $cor-secundaria;
           }
         }
       }

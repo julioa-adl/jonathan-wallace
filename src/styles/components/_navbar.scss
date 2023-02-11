@@ -9,11 +9,15 @@
   z-index: 1;
   .btn-contacte-nos {
     background-color: $cor-terc-green !important;
+    border: $cor-terc-green solid 1px;
+    color: $cor-branca;
+    font-family: $font;
+    font-weight: $md;
     &:hover {
       background-color: $cor-branca !important;
       color: $cor-terc-green;
       font-family: $font;
-      font-weight: $md;
+      font-weight: $rg;
     }
   }
   .nav-itens {
