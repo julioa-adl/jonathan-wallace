@@ -1,0 +1,93 @@
+@import '../abstract/variaveis';
+
+.services-home {
+  height: 100%;
+  min-height: 800px;
+  width: 80%;
+  margin: 0 10%;
+  h2 {
+    font-family: $font;
+    font-weight: $sb;
+    color: $cor-primaria;
+    text-align: center;
+  }
+  p {
+    font-family: $font;
+    font-weight: $rg;
+    color: $cor-primaria;
+    text-align: center;
+  }
+  .container-cards-serv-home {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    div {
+      .capa-card-serv-home-container {
+        overflow: hidden;
+        height: 278px;
+        width: 100% / 3;
+        &:hover .capa-card-serv-home,
+        &:focus .capa-card-serv-home {
+          transform: scale(1.2);
+        }
+        .capa-card-serv-home {
+          height: 100%;
+          width: 100%;
+          transition: all 0.5s;
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat;
+        }
+      }
+      .infos-card-serv-home {
+        margin: 10px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .icon-card-serv-home {
+          width: 100%;
+        }
+        .txt-infos-card-home {
+          h1 {
+            font-family: $font;
+            transition: all 0.5s;
+            font-weight: $sb;
+            font-size: $tamanho-do-texto / 2.5;
+            color: $cor-primaria;
+            text-align: center;
+          }
+          p {
+            font-family: $font;
+            transition: all 0.5s;
+            font-weight: $rg;
+            color: $cor-primaria;
+            font-size: $tamanho-do-texto / 3.5;
+            text-align: left;
+            margin-left: 10%;
+          }
+          &:hover h1,
+          &:hover p{
+            color: $cor-terc-red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xl) {
+  .services-home {
+    .container-cards-serv-home {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .services-home {
+    .container-cards-serv-home {
+      grid-template-columns: 1fr;
+    }
+  }
+}

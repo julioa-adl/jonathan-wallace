@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import bgHeaderHome from '../../images/bg-header-home.webp'
 import AboutMe from './home-components./AboutMe';
 import CardHeader from './home-components./CardHeader';
+import ServicesHome from './home-components./ServicesHome';
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       />
       <CardHeader/>
       <AboutMe/>
+      <ServicesHome/>
     </div>
   )
 }

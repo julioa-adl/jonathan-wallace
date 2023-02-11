@@ -23,7 +23,7 @@
       width: 6%;
       position: absolute;
       border-radius: 20%;
-      transform: rotate(45deg);
+      // transform: rotate(45deg);
       opacity: 0.8;
     }
     .q-vermelho {
@@ -31,11 +31,15 @@
       height: 7%;
       width: 7%;
       background-color: $cor-terc-red;
+      animation: spin-q-in 5s forwards;
+      transition: transform 0.3s ease;
     }
     .q-azul {
       top: 20%;
       left: 75%;
       background-color: $cor-terc-blue;
+      animation: spin-q-in 10s forwards;
+      transition: transform 0.3s ease;
     }
     .q-amarelo {
       top: 70%;
@@ -43,6 +47,8 @@
       height: 7%;
       width: 7%;
       background-color: $cor-secundaria;
+      animation: spin-q-in 8s forwards;
+      transition: transform 0.3s ease;
     }
   }
   .txt-aboutme {
@@ -82,6 +88,7 @@
   .about-me {
     flex-direction: column;
     justify-content: center;
+    height: 100%;
     div {
       width: 100%;
     }
@@ -91,7 +98,7 @@
       }
     }
     .txt-aboutme {
-      padding: 0 20px;
+      padding: 20px;
       h2 {
         text-align: center;
       }
@@ -120,5 +127,17 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes spin-q-in {
+  from {
+    opacity: 0;
+    transform: translateX(200%) rotate(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(45deg);
   }
 }

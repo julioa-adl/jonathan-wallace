@@ -35,7 +35,11 @@ function AboutMe() {
             </div>
             <div className='txt-aboutme'>
               <h2>Jonathan Wallace</h2>
-              <p>Nosso Diretor e Fundador, um empreendedor visionário, começou sua jornada no mercado de manutenção no Brasil, onde conquistou seu espaço com seu trabalho excepcional e dedicação. Com o tempo, surgiu a oportunidade de expandir sua empresa para Portugal, e hoje é reconhecido por sua proficiência e agilidade no setor.</p>
+              <p>Nosso Diretor e Fundador, um empreendedor visionário, que sempre teve uma paixão pelo setor de manutenção. Começando sua jornada no Brasil, ele rapidamente se destacou pelo seu trabalho de qualidade e dedicação, conquistando sua reputação no mercado.
+              <br/>
+              <br/>
+              Com a sua visão de oferecer soluções completas em manutenção geral, ele expandiu sua empresa para Portugal, onde continua a fornecer soluções de alta qualidade e eficiência. Com sua equipe altamente capacitada e comprometida, nossa empresa tem se tornado cada vez mais reconhecida no mercado pelo sua dedicação e excelente trabalho.
+              </p>
               <Button className='btn-saber-mais' variant="info">Saber mais <BsArrowRight/></Button>
             </div>
           </>
