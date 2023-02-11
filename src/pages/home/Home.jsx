@@ -1,4 +1,5 @@
 import React from 'react';
+import Depoimentos from '../../components/Depoimentos';
 import FaleConosco from '../../components/FaleConosco';
 import Header from '../../components/Header';
 
@@ -21,6 +22,7 @@ function Home() {
       <ServicesHome/>
       <section className='section-home-bottom'>
         <FaleConosco/>
+        <Depoimentos/>
       </section>
     </div>
   )

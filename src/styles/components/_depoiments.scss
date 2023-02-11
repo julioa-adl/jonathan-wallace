@@ -1,0 +1,116 @@
+@import '../abstract/variaveis';
+
+.depoimentos {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  min-height: 700px;
+  // width: 80%;
+  // margin: 0 10%;
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    animation: fade 0.4s ease-in-out;
+    transition-duration: 0.4s;
+    .div-nextIcon {
+      display: flex;
+      justify-content: center;
+      width: 50px;
+      .nextIcon {
+        opacity: 0.1;
+        cursor: pointer;
+        color: $cor-branca;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+        font-size: $tamanho-do-texto - 1;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .txt-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 8%;
+      text-align: center;
+      color: $cor-branca;
+      h2 {
+        font-family: $font;
+        font-weight: $sb;
+        color: $cor-branca;
+      }
+      p {
+        padding: 0 10%;
+        font-family: $font;
+        font-weight: $rg;
+        color: $cor-branca;
+        position: relative;
+        .aspas {
+          position: absolute;
+          font-size: $tamanho-do-texto + 2;
+          color: $cor-secundaria;
+          top: -20px;
+          left: 5%;
+          opacity: 0.2;
+          z-index: 1;
+        }
+      }
+      .client-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          font-family: $font;
+          font-weight: $sm;
+          font-size: $tamanho-do-texto / 2.2;
+          margin: 0;
+        }
+        hr {
+          width: 200px;
+          border: 1.4px solid $cor-secundaria;
+          opacity: 1;
+          margin: 5px 0;
+        }
+        h3 {
+          font-family: $font;
+          font-weight: $lg;
+          font-size: $tamanho-do-texto / 2.5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .depoimentos {
+    .carousel {
+      .txt-container {
+        padding: 8% 0;
+        p {
+          padding: 0;
+          .aspas {
+            font-size: $tamanho-do-texto;
+            left: 2%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
