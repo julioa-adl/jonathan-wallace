@@ -14,7 +14,7 @@ function Depoimentos() {
   useEffect(() => {
     const interval = setInterval(_ => {
       if (useId === depoiments.length - 1) {
-        setDepoimentId((prev) => prev -= prev);
+        setDepoimentId(0);
       } else {
         setDepoimentId((prev) => prev += 1);
       }
@@ -24,7 +24,7 @@ function Depoimentos() {
 
   const nextDep = () => {
     if (useId === depoiments.length - 1) {
-      setDepoimentId((prev) => prev -= prev);
+      setDepoimentId(0);
       return;
     } else {
       setDepoimentId((prev) => prev += 1);
