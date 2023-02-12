@@ -13,6 +13,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import logo from '../images/logo.png';
 
+import servicos from '../utils/object.services';
+
 function NavBar() {
   const [positionNav, setPositionNav] = useState('');
 
@@ -65,32 +67,20 @@ function NavBar() {
           <Offcanvas.Body>
             <Nav className="nav-itens justify-content-start flex-grow-3">
               <Nav.Link className='item' as={ Link } to={ '/' }>Home</Nav.Link>
-              <Nav.Link className='item' href="#action2">Sobre-nós</Nav.Link>
+              <Nav.Link className='item' as={ Link } to={ '/sobre' }>Sobre-nós</Nav.Link>
               <NavDropdown
                 className='item'
                 title="Serviços"
                 id={`offcanvasNavbarDropdown-expand-${'lg'}`}
               >
-                <NavDropdown.Item
-                  href="#action3">
-                  Manutenção
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="#action3">
-                  Remodelação
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="#action3">
-                  Elétrica
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="#action3">
-                  Hidráulica
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="#action3">
-                  Serviços em Altura
-                </NavDropdown.Item>
+                {
+                  servicos.map((serv) => (
+                  <NavDropdown.Item
+                    as={ Link } to={ '/servicos' }>
+                    { serv.title }
+                  </NavDropdown.Item>
+                  ))
+                }
               </NavDropdown>
             </Nav>
             <Nav className="justify-content-end flex-grow-1">
