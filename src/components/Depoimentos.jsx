@@ -16,7 +16,7 @@ function Depoimentos() {
       if (useId === depoiments.length - 1) {
         setDepoimentId(0);
       } else {
-        setDepoimentId((prev) => prev += 1);
+        setDepoimentId((prev) => prev + 1);
       }
     }, timing);
     return _ => clearInterval(interval);
@@ -27,17 +27,17 @@ function Depoimentos() {
       setDepoimentId(0);
       return;
     } else {
-      setDepoimentId((prev) => prev += 1);
+      setDepoimentId((prev) => prev + 1);
       return;
     }
   }
 
   const prevDep = () => {
     if (useId === 0) {
-      setDepoimentId((prev) => prev += (depoiments.length - 1));
+      setDepoimentId(depoiments.length - 1);
       return;
     } else {
-      setDepoimentId((prev) => prev -= 1);
+      setDepoimentId((prev) => prev - 1);
       return;
     }
   }
