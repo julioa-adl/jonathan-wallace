@@ -1,6 +1,7 @@
 @import '../abstract/variaveis';
 
 .depoimentos {
+  overflow: hidden !important;
   display: flex;
   align-items: center;
   height: 80vh;
@@ -41,26 +42,26 @@
       padding: 8%;
       text-align: center;
       color: $cor-branca;
+      position: relative;
       h2 {
         font-family: $font;
         font-weight: $sb;
         color: $cor-branca;
+      }
+      .aspas {
+        position: absolute;
+        font-size: $tamanho-do-texto * 3;
+        color: $cor-secundaria;
+        // top: 25%;
+        left: 10%;
+        opacity: 0.1;
+        z-index: 1;
       }
       p {
         padding: 0 10%;
         font-family: $font;
         font-weight: $rg;
         color: $cor-branca;
-        position: relative;
-        .aspas {
-          position: absolute;
-          font-size: $tamanho-do-texto + 2;
-          color: $cor-secundaria;
-          top: -20px;
-          left: 5%;
-          opacity: 0.2;
-          z-index: 1;
-        }
       }
       .client-container {
         display: flex;
@@ -95,10 +96,11 @@
         padding: 8% 0;
         p {
           padding: 0;
-          .aspas {
-            font-size: $tamanho-do-texto;
-            left: 2%;
-          }
+        }
+        .aspas {
+          font-size: $tamanho-do-texto;
+          top: 20%;
+          left: -10%;
         }
       }
     }

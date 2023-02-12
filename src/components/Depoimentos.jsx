@@ -9,7 +9,7 @@ import depoiments from '../utils/object.depoiments';
 function Depoimentos() {
   const [useId, setDepoimentId] = useState(0);
   const dep = depoiments[useId];
-  const timing = 2000;
+  const timing = 10000;
 
   useEffect(() => {
     const interval = setInterval(_ => {
@@ -56,7 +56,8 @@ function Depoimentos() {
         </div>
         <div className='txt-container'>
           <h2>Depoimentos</h2>
-          <p><FaQuoteLeft className='aspas'/>{ dep.depoiment }</p>
+          <FaQuoteLeft className='aspas'/>
+          <p>{ dep.depoiment }</p>
           <div className='client-container'>
             <h2>{ dep.cliente }</h2>
             <hr/>
