@@ -1,0 +1,108 @@
+@import '../abstract/variaveis';
+
+.footer-container {
+  height: 100%;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $cor-terc-green;
+    padding: 20px 10%;
+    div {
+      width: 33%;
+      padding: 0 40px 0 0;
+    }
+    .about-footer {
+      h1 {
+        font-family: $font;
+        font-size: $tamanho-do-texto / 2;
+        font-weight: $sb;
+        color: $cor-secundaria;
+      }
+      img {
+        width: 150px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-family: $font;
+        font-weight: $rg;
+        color: $cor-branca;
+        font-size: $tamanho-do-texto / 3;
+      }
+    }
+    .links-footer {
+      h1 {
+        font-family: $font;
+        font-size: $tamanho-do-texto / 2;
+        font-weight: $sb;
+        color: $cor-secundaria;
+      }
+      ul {
+        padding: 0;
+        li {
+          span {
+            font-family: $font;
+            font-weight: $rg;
+            color: $cor-branca;
+            font-size: $tamanho-do-texto / 3;
+            cursor: pointer;
+            &:hover {
+              color: $cor-secundaria;
+            }
+          }
+        }
+      }
+    }
+    .contatos-footer {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-family: $font;
+        font-size: $tamanho-do-texto / 2;
+        font-weight: $sb;
+        color: $cor-secundaria;
+      }
+      span {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-family: $font;
+        font-weight: $rg;
+        color: $cor-branca;
+        font-size: $tamanho-do-texto / 3;
+        .ico-footer {
+          color: $cor-secundaria;
+        }
+      }
+    }
+  }
+  .rodape {
+    display: flex;
+    justify-content: center;
+    background-color: $cor-primaria;
+    span {
+      font-family: $font;
+      color: $cor-branca;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .footer-container {
+    .footer {
+      padding: 20px;
+      flex-direction: column;
+      div {
+        width: 100%;
+        height: 33%;
+        padding: 0;
+      }
+    }
+    .rodape {
+      padding: 5px;
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

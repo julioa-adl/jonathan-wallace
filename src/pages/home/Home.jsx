@@ -2,6 +2,7 @@ import React from 'react';
 import Clientes from '../../components/Clientes';
 import Depoimentos from '../../components/Depoimentos';
 import FaleConosco from '../../components/FaleConosco';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 import bgHeaderHome from '../../images/bg-header-home.webp'
@@ -25,6 +26,7 @@ function Home() {
         <FaleConosco/>
         <Depoimentos/>
         <Clientes/>
+        <Footer/>
       </section>
     </div>
   )
