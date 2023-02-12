@@ -1,4 +1,5 @@
 import React from 'react';
+import Clientes from '../../components/Clientes';
 import Depoimentos from '../../components/Depoimentos';
 import FaleConosco from '../../components/FaleConosco';
 import Header from '../../components/Header';
@@ -23,6 +24,7 @@ function Home() {
       <section className='section-home-bottom'>
         <FaleConosco/>
         <Depoimentos/>
+        <Clientes/>
       </section>
     </div>
   )
