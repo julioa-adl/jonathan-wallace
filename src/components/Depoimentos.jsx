@@ -14,7 +14,7 @@ function Depoimentos() {
   useEffect(() => {
     const interval = setInterval(_ => {
       if (useId === depoiments.length - 1) {
-        setDepoimentId(0);
+        setDepoimentId((prev) => prev -= prev);
       } else {
         setDepoimentId((prev) => prev += 1);
       }
@@ -24,20 +24,20 @@ function Depoimentos() {
 
   const nextDep = () => {
     if (useId === depoiments.length - 1) {
-      setDepoimentId(0);
+      setDepoimentId((prev) => prev -= prev);
       return;
     } else {
-      setDepoimentId(useId + 1);
+      setDepoimentId((prev) => prev += 1);
       return;
     }
   }
 
   const prevDep = () => {
     if (useId === 0) {
-      setDepoimentId(depoiments.length - 1);
+      setDepoimentId((prev) => prev += (depoiments.length - 1));
       return;
     } else {
-      setDepoimentId(useId - 1);
+      setDepoimentId((prev) => prev -= 1);
       return;
     }
   }
