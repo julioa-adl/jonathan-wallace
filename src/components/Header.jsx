@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import TopBar from './TopBar'
 
-function Header({ bg, altura, title, subtitle }) {
+function Header({ bg, altura, title, subtitle, corTitle, corSubtitle }) {
   return (
     <header
       className='header'
@@ -14,8 +14,8 @@ function Header({ bg, altura, title, subtitle }) {
       <TopBar/>
       <NavBar/>
       <div className='txt-container-header'>
-        <h1 className='header-title'>{ title }</h1>
-        <p className='header-subtitle'>{ subtitle }</p>
+        <h1 className={`header-title ${corTitle}`}>{ title }</h1>
+        <p className={`header-subtitle ${corSubtitle}`}>{ subtitle }</p>
       </div>
     </header>
   )

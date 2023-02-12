@@ -22,7 +22,9 @@ function Footer() {
           <ul>
             {
               serviços.map((serv) => (
-                <li><span>{ `-${ serv.title }` }</span></li>
+                <li key={`servFooter${serv.title}`}>
+                  <span>{ `-${ serv.title }` }</span>
+                </li>
               ))
             }
           </ul>
@@ -35,7 +37,7 @@ function Footer() {
         </div>
       </div>
       <div className='rodape'>
-        <span>© 2023 JONATHAN WALLACE - Todos os direitos reservados - Desenvolvido por Júlio Adler</span>
+        <span>© 2023 JONATHAN WALLACE - Todos os direitos reservados - Desenvolvido por <a target="blank" href='https://www.linkedin.com/in/julio-a-f-mesquita/'>Júlio Adler</a></span>
       </div>
     </div>
   )

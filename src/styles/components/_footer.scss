@@ -83,6 +83,17 @@
     span {
       font-family: $font;
       color: $cor-branca;
+      font-size: $tamanho-do-texto / 3;
+      a {
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+        color: $cor-branca;
+        &:hover {
+          color: #3F979B;
+          border-bottom: solid 1px #3F979B;
+        }
+      }
     }
   }
 }
@@ -102,6 +113,7 @@
       padding: 5px;
       span {
         text-align: center;
+        font-size: $tamanho-do-texto / 4;
       }
     }
   }

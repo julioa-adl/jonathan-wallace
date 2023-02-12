@@ -11,16 +11,17 @@ function Clientes() {
   return (
     <div className='client-logo-container'>
       <Swiper
+      className='logos-list'
       modules={[Autoplay]}
       spaceBetween={50}
       slidesPerView={4}
       autoplay={true}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
       >
         {
           logo_clients.keys().map((logo, i) => (
-            <SwiperSlide>
+            <SwiperSlide key={`clientsLogo${i}`}>
               <img
                 key={ `client${i}` }
                 src={ logo_clients(logo) }

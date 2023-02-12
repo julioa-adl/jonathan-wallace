@@ -1,0 +1,49 @@
+@import '../abstract/variaveis';
+
+.conquistas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 5% 10%;
+  min-height: 500px;
+  margin-bottom: 80px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-weight: $b;
+      font-size: $tamanho-do-texto;
+      color: $cor-secundaria;
+      transition: all ease-in-out;
+    }
+    p {
+      font-family: $font;
+      font-size: $tamanho-do-texto / 3;
+      font-weight: $rg;
+      text-align: center;
+      color: $cor-branca;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .conquistas {
+    justify-content: space-between;
+    padding: 5%;
+    margin-bottom: 40px;
+    min-height: 400px;
+    div {
+      h1 {
+        font-size: $tamanho-do-texto / 2;
+      }
+      p {
+        font-size: $tamanho-do-texto / 4;
+      }
+    }
+  }
+}

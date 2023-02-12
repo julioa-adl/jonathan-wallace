@@ -1,7 +1,8 @@
 @import './abstract/base';
+@import './abstract/variaveis';
 @import "~bootstrap/scss/bootstrap";
 //  Pages
-@import './pages/home';
+@import './pages/pages';
 
 // Components
 @import './components/topbar';
@@ -16,3 +17,7 @@
   @import './components/cardheader';
   @import './components/aboutme';
   @import './components/servicesHome';
+
+  // About Components
+  @import './components/ourhistory';
+  @import './components/conquistas';
