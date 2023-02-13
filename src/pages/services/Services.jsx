@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 
-import Header from '../../components/Header';
 import servicos from '../../utils/object.services';
-import bgHeader from '../../images/bg-header-home.webp'
+import bgHeader from '../../images/bg-header-home.webp';
+import vid_servs from '../../images/vid-servs.mp4';
+
+import Header from '../../components/Header';
 import TitleServices from './services-components/TitleServices';
 import CardServices from './services-components/CardServices';
 import FaleConosco from '../../components/FaleConosco';
@@ -26,6 +28,7 @@ function Services({ match }) {
       <Header
         bg={ bgHeader }
         altura={ 60 }
+        video={ vid_servs }
         title={ 'SERVIÇOS' }
         corTitle='c-b'
       />

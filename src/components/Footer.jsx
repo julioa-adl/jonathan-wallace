@@ -35,9 +35,9 @@ function Footer() {
         </div>
         <div className='contatos-footer'>
           <h1>Contactos</h1>
-            <span><MdEmail className='ico-footer'/>- jonata.wallace@gmail.com</span>
-            <span><MdPhoneIphone className='ico-footer'/>- +351 927 082 012</span>
-            <span><MdLocationOn className='ico-footer'/>- Lisboa - Portugal</span>
+          <span><MdEmail className='ico-footer'/>- jonata.wallace@gmail.com</span>
+          <span><MdPhoneIphone className='ico-footer'/>- +351 927 082 012</span>
+          <span><MdLocationOn className='ico-footer'/>- Lisboa - Portugal</span>
         </div>
       </div>
       <div className='rodape'>

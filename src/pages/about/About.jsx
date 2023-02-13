@@ -4,9 +4,8 @@ import FaleConosco from '../../components/FaleConosco';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
-import bgAbout from '../../images/bg-about.webp'
-import bgHeader from '../../images/bg-header-home.webp'
-import bgAnime from '../../images/animated-bg.mp4'
+import bgHeader from '../../images/bg-header-home.webp';
+import vid_jon from '../../images/vid-jonata-yel.mp4'
 
 import Conquistas from './about-components/Conquistas';
 import OurHistory from './about-components/OurHistory';
@@ -22,7 +21,7 @@ function About() {
     <div className='pages'>
       <Header
         bg={ bgHeader }
-        video={ bgAnime }
+        video={ vid_jon }
         altura={ 60 }
         title={ 'SOBRE NÓS' }
         corTitle='c-b'

@@ -73,6 +73,12 @@ function NavBar() {
                 title="Serviços"
                 id={`offcanvasNavbarDropdown-expand-${'lg'}`}
               >
+                <NavDropdown.Item
+                as={ Link } to={ '/servicos' }
+                >
+                  Todos os Serviços
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
                 {
                   servicos.map((serv) => (
                   <NavDropdown.Item

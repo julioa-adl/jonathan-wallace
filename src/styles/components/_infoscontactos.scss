@@ -1,0 +1,65 @@
+@import '../abstract/variaveis';
+
+.infoscontactos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  // justify-content: center;
+  h2 {
+    font-family: $font;
+    font-weight: $sb;
+    color: $cor-primaria;
+    margin-bottom: 40px;
+  }
+  span {
+    margin-top: 20px;
+    font-size: $tamanho-do-texto / 2;
+    font-family: $font;
+    color: $cor-primaria;
+    .ico-contactos {
+      font-size: $tamanho-do-texto;
+      color: $cor-secundaria;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .infoscontactos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    // justify-content: center;
+    h2 {
+      font-family: $font;
+      font-size: $tamanho-do-texto / 2;
+      font-weight: $sb;
+      color: $cor-primaria;
+      margin-bottom: 40px;
+    }
+    span {
+      margin-top: 20px;
+      font-size: $tamanho-do-texto / 3;
+      font-family: $font;
+      color: $cor-primaria;
+      .ico-contactos {
+        font-size: $tamanho-do-texto / 2;
+        color: $cor-secundaria;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .infoscontactos {
+    width: 100%;
+    h2 {
+      margin-bottom: 20px;
+    }
+    span {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../abstract/variaveis';
+
+.formcontacto {
+  width: 50%;
+  h2 {
+    font-family: $font;
+    font-weight: $rg;
+    color: $cor-primaria;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .formcontacto {
+    width: 50%;
+    h2 {
+      font-size: $tamanho-do-texto / 2;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .formcontacto {
+    width: 100%;
+    h2 {
+      margin-bottom: 20px;
+      font-weight: $sb;
+    }
+  }
+}
