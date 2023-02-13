@@ -22,7 +22,7 @@ function About() {
         video={ bgAnime }
         altura={ 60 }
         title={ 'SOBRE NÓS' }
-        corTitle='c-s'
+        corTitle='c-b'
       />
       <OurHistory/>
       <Conquistas/>
