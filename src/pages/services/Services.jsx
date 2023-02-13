@@ -30,7 +30,7 @@ function Services({ match }) {
   return (
     <div className='pages'>
       <Header
-        bg={ bgHeader }
+        // bg={ bgHeader }
         altura={ 60 }
         video={ vid_servs }
         title={ 'SERVIÇOS' }
