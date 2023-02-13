@@ -14,9 +14,10 @@ function Services({ match }) {
 
   useEffect(() => {
     if (service) {
+      console.log(service)
       const element = document.querySelector(`#${service}`);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
   });
@@ -34,7 +35,7 @@ function Services({ match }) {
         servicos.map((s, i) => (
           <CardServices
             key={`servCardPage${ i }`}
-            id={ s.pathName }
+            idN={ s.pathName }
             cn={ i % 2 === 0 ? 'right-card' : 'left-card'}
             img={ s.cover }
             title={ s.title }

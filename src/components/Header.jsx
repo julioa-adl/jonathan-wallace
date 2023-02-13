@@ -9,7 +9,6 @@ function Header({ bg, altura, title, subtitle, corTitle, corSubtitle, video }) {
       style={{
         background: `url(${ bg })`,
         height: `${ altura }vh`,
-        // minHeight: `${ altura }vh !important`,
       }}
     >
     { video ? (

@@ -1,8 +1,8 @@
 import React from 'react';
 
-function CardServices({ img, title, description, cn }) {
+function CardServices({ img, title, description, cn, idN }) {
   return (
-    <div className={ cn }>
+    <div className={ cn } id={ idN }>
       <div className='img-serv-card'
       style={{ background: `url(${ img })` }}
       />
