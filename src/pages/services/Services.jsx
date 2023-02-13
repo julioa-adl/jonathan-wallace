@@ -14,7 +14,6 @@ function Services({ match }) {
 
   useEffect(() => {
     if (service) {
-      console.log(service)
       const element = document.querySelector(`#${service}`);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });

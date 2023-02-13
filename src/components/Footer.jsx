@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import logo_branca from '../images/logo-branca.png';
 import serviços from '../utils/object.services';
@@ -6,7 +7,7 @@ import serviços from '../utils/object.services';
 import { MdEmail } from "react-icons/md";
 import { MdPhoneIphone } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
-
+import { BsDot } from "react-icons/bs";
 
 function Footer() {
   return (
@@ -23,7 +24,10 @@ function Footer() {
             {
               serviços.map((serv) => (
                 <li key={`servFooter${serv.title}`}>
-                  <span>{ `-${ serv.title }` }</span>
+                  <Link
+                    className='link-f'
+                    to={ `/servicos/${serv.pathName}` }
+                  ><BsDot/>{ serv.title }</Link>
                 </li>
               ))
             }

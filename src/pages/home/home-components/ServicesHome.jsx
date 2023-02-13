@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import services from '../../../utils/object.services';
 
@@ -20,13 +21,15 @@ function ServicesHome() {
                 />
               </div>
               <div className='infos-card-serv-home'>
-                <div className='div-icon-card-serv-home'>
-                  <img className='icon-card-serv-home' alt={ `ico${ serv.title }` } src={ serv.icon }/>
-                </div>
-                <div className='txt-infos-card-home'>
-                  <h1>{ serv.title }</h1>
-                  <p>{ serv.resumo }</p>
-                </div>
+                <Link to={ `/servicos/${serv.pathName}` } className='link-serv-home'>
+                  <div className='div-icon-card-serv-home'>
+                    <img className='icon-card-serv-home' alt={ `ico${ serv.title }` } src={ serv.icon }/>
+                  </div>
+                  <div className='txt-infos-card-home'>
+                    <h1>{ serv.title }</h1>
+                    <p>{ serv.resumo }</p>
+                  </div>
+                </Link>
               </div>
             </div>
           ))

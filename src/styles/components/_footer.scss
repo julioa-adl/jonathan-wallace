@@ -4,10 +4,10 @@
   height: 100%;
   .footer {
     display: flex;
-    height: 50vh;
+    height: 40vh;
     justify-content: space-between;
     background-color: $cor-terc-green;
-    padding: 8% 10%;
+    padding: 5% 10%;
     div {
       display: flex;
       flex-direction: column;
@@ -38,7 +38,7 @@
       ul {
         padding: 0;
         li {
-          span {
+          .link-f {
             font-family: $font;
             font-weight: $rg;
             color: $cor-branca;
