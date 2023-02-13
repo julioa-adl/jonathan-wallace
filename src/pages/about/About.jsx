@@ -10,6 +10,7 @@ import bgAnime from '../../images/animated-bg.mp4'
 
 import Conquistas from './about-components/Conquistas';
 import OurHistory from './about-components/OurHistory';
+import Mission from '../../components/Mission';
 
 
 function About() {
@@ -28,6 +29,7 @@ function About() {
       />
       <OurHistory/>
       <Conquistas/>
+      <Mission/>
       <section className='section-pages-bottom'>
         <FaleConosco/>
         <Clientes/>
