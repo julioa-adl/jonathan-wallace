@@ -6,7 +6,8 @@
   gap: 20px;
   align-items: center;
   padding: 5px 10vw;
-  z-index: 1;
+  position: relative;
+  z-index: 1 !important;
   div {
     display: flex;
     align-items: center;
