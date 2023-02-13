@@ -84,7 +84,9 @@ function NavBar() {
               </NavDropdown>
             </Nav>
             <Nav className="justify-content-end flex-grow-1">
-              <Button variant="success" className='btn-contacte-nos'>Contacte-nos</Button>
+              <Button variant="success" 
+              as={ Link } to={ '/contactos' }
+              className='btn-contacte-nos'>Contacte-nos</Button>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
