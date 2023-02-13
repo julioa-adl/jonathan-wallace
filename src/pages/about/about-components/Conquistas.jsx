@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+import useWindowSize from '../../../hooks/useWindowSize';
+import useWindowScroll from '../../../hooks/useWindowScroll';
 
 import bg_conquistas from '../../../images/bg-conquistas.webp';
 
 function Conquistas() {
   const idade = new Date().getFullYear() - 2012;
-  const obras = 400;
+  const obras = 800;
   const acidentes = 0;
   const clientes = 600;
 
@@ -12,6 +15,19 @@ function Conquistas() {
   const [rObras, setObras] = useState(0);
   const [rAcidentes, setAcidentes] = useState(0);
   const [rClientes, setClientes] = useState(0);
+  const [renderView, setRenderView] = useState(false);
+
+  const ref = useRef(null);
+
+  const size = useWindowSize();
+  const position = useWindowScroll();
+
+  useEffect(() => {
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura < size.height * 0.75) {
+      setRenderView(true);
+    }
+  }, [position, size]);
 
   const timing = 3000;
   let timeoutId = null;
@@ -28,15 +44,18 @@ function Conquistas() {
   };
 
   useEffect(() => {
-    timingFunction(timing, idade, setIdade);
-    timingFunction(timing, obras, setObras);
-    timingFunction(timing, acidentes, setAcidentes);
-    timingFunction(timing, clientes, setClientes);
-    return () => clearTimeout(timeoutId);
-  }, []);
+    if (renderView) {
+      timingFunction(timing, idade, setIdade);
+      timingFunction(timing, obras, setObras);
+      timingFunction(timing, acidentes, setAcidentes);
+      timingFunction(timing, clientes, setClientes);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [renderView]);
 
   return (
     <div
+      ref={ ref }
       style={{ background: `url(${ bg_conquistas })` }}
       className='conquistas'>
       <div>
@@ -45,7 +64,7 @@ function Conquistas() {
       </div>
       <div>
         <h1>{`+${rObras}`}</h1>
-        <p>Obras<br/>Concluídas</p>
+        <p>Serviços<br/>Concluídos</p>
       </div>
       <div>
         <h1>{`${rAcidentes}`}</h1>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { BsArrowRight } from "react-icons/bs";
 
@@ -40,7 +41,10 @@ function AboutMe() {
               <br/>
               Com a sua visão de oferecer soluções completas em manutenção geral, ele expandiu sua empresa para Portugal, onde continua a fornecer soluções de alta qualidade e eficiência. Com sua equipe altamente capacitada e comprometida, nossa empresa tem se tornado cada vez mais reconhecida no mercado pelo sua dedicação e excelente trabalho.
               </p>
-              <Button className='btn-saber-mais' variant="info">Saber mais <BsArrowRight/></Button>
+              <Button
+                as={ Link } to={'/sobre'}
+                className='btn-saber-mais' variant="info">Saber mais <BsArrowRight/>
+              </Button>
             </div>
           </>
         ) : <p></p>

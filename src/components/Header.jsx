@@ -9,6 +9,7 @@ function Header({ bg, altura, title, subtitle, corTitle, corSubtitle }) {
       style={{
         background: `url(${ bg })`,
         height: `${ altura }vh`,
+        // minHeight: `${ altura }vh !important`,
       }}
     >
       <TopBar/>

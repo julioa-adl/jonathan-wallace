@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Clientes from '../../components/Clientes';
 import Depoimentos from '../../components/Depoimentos';
 import FaleConosco from '../../components/FaleConosco';
@@ -11,11 +11,15 @@ import CardHeader from './home-components/CardHeader';
 import ServicesHome from './home-components/ServicesHome';
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='pages'>
       <Header
         bg={ bgHeaderHome }
-        altura={ 100 }
+        altura={ 90 }
         title={ 'MANUTENÇÃO' }
         subtitle={ 'Residencial e Comercial | Serviços de Urgência' }
         corTitle={ 'c-b' }
