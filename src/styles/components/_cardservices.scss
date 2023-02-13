@@ -1,0 +1,116 @@
+@import '../abstract/variaveis';
+
+.right-card {
+  height: 50vh;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  .img-serv-card {
+    height: 100%;
+    width: 50%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .serv-txt-container {
+    background-color: $cor-cinza;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    width: 50%;
+    h2 {
+      margin: 0;
+      font-family: $font;
+      font-weight: $sb;
+      color: $cor-primaria;
+    }
+    hr {
+      width: 200px;
+      border: 2px solid $cor-secundaria;
+      opacity: 1;
+    }
+    p {
+      font-family: $font;
+      font-weight: $rg;
+      color: $cor-primaria;
+    }
+  }
+}
+
+.left-card {
+  height: 50vh;
+  display: flex;
+  width: 100%;
+  .img-serv-card {
+    height: 100%;
+    width: 50%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .serv-txt-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    width: 50%;
+    h2 {
+      margin: 0;
+      font-family: $font;
+      font-weight: $sb;
+      color: $cor-primaria;
+    }
+    hr {
+      width: 200px;
+      border: 2px solid $cor-secundaria;
+      opacity: 1;
+    }
+    p {
+      font-family: $font;
+      font-weight: $rg;
+      color: $cor-primaria;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .right-card {
+    height: 40vh;
+    .serv-txt-container {
+      padding: 2%;
+      h2 {
+        font-size: $tamanho-do-texto / 3;
+      }
+      hr {
+        width: 100px;
+        border: 1.8px solid $cor-secundaria;
+      }
+      p {
+        font-size: $tamanho-do-texto / 4;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+  }
+  
+  .left-card {
+    height: 40vh;
+    .serv-txt-container {
+      h2 {
+        font-size: $tamanho-do-texto / 3;
+      }
+      hr {
+        width: 100px;
+        border: 1.8px solid $cor-secundaria;
+      }
+      p {
+        font-size: $tamanho-do-texto / 4;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+  }
+}

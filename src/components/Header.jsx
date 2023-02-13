@@ -17,7 +17,7 @@ function Header({ bg, altura, title, subtitle, corTitle, corSubtitle, video }) {
         <video
         src={ video }
         muted
-        playsinline
+        playsInline
         autoPlay
         loop 
         />

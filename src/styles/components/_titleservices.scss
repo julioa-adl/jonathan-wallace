@@ -1,0 +1,44 @@
+@import '../abstract/variaveis';
+
+.titleServices {
+  display: flex;
+  margin:  50px 10%;
+  h2 {
+    font-family: $font;
+    font-weight: $md;
+    color: $cor-primaria;
+    width: 50%;
+    strong {
+      font-weight: $sb;
+    }
+  }
+  p {
+    font-family: $font;
+    font-weight: $rg;
+    color: $cor-primaria;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .titleServices {
+    display: flex;
+    flex-direction: column;
+    margin:  50px 5%;
+    h2 {
+      font-family: $font;
+      font-weight: $md;
+      color: $cor-primaria;
+      width: 100%;
+      strong {
+        font-weight: $sb;
+      }
+    }
+    p {
+      font-family: $font;
+      font-weight: $rg;
+      color: $cor-primaria;
+      width: 100%;
+    }
+  }
+}

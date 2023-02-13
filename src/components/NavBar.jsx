@@ -76,7 +76,7 @@ function NavBar() {
                 {
                   servicos.map((serv) => (
                   <NavDropdown.Item
-                    as={ Link } to={ '/servicos' } key={`navserv${serv.title}`}>
+                    as={ Link } to={ `/servicos/${serv.pathName}` } key={`navserv${serv.title}`}>
                     { serv.title }
                   </NavDropdown.Item>
                   ))

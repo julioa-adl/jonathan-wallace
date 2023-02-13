@@ -1,9 +1,9 @@
 .pages {
-  overflow-x: hidden !important;
+  overflow-Y: hidden !important;
   max-width: 100vw !important;
   .section-pages-bottom {
     overflow: hidden !important;
     height: 100%;
-    background-color: rgba(217, 217, 217,40%);
+    background-color: $cor-cinza;
   }
 }
