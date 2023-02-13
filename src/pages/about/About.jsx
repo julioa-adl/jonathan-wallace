@@ -20,7 +20,7 @@ function About() {
   return (
     <div className='pages'>
       <Header
-        bg={ bgHeader }
+        // bg={ bgHeader }
         video={ vid_jon }
         altura={ 60 }
         title={ 'SOBRE NÓS' }

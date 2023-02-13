@@ -15,6 +15,10 @@ function Services({ match }) {
   const service = match.params.id;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (service) {
       const element = document.querySelector(`#${service}`);
       if (element) {

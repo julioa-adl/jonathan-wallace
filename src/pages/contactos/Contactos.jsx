@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '../../components/Header';
 
@@ -9,6 +9,10 @@ import FaleConosco from '../../components/FaleConosco';
 import Footer from '../../components/Footer';
 
 function Contactos() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='pages'>
       <Header
