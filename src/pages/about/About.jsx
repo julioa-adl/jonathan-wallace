@@ -5,7 +5,9 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 import bgAbout from '../../images/bg-about.webp'
+import bgHeader from '../../images/bg-header-home.webp'
 import bgAnime from '../../images/animated-bg.mp4'
+
 import Conquistas from './about-components/Conquistas';
 import OurHistory from './about-components/OurHistory';
 
@@ -18,7 +20,7 @@ function About() {
   return (
     <div className='pages'>
       <Header
-        bg={ bgAbout }
+        bg={ bgHeader }
         video={ bgAnime }
         altura={ 60 }
         title={ 'SOBRE NÓS' }

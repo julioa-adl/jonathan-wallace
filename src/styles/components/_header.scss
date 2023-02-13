@@ -93,6 +93,7 @@
 
 @media screen and (max-width: $md) {
   .header {
+    .video { display: none; }
     background-position: center !important;
     min-height: 400px !important;
     .txt-container-header {
