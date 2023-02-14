@@ -7,7 +7,7 @@ function Whatsapp() {
     <a
       className='whatsapp'
       target="blank"
-      href="https://wa.me/5581992275570?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento%21">
+      href="https://api.whatsapp.com/send?phone=351927082012&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento">
       <IoLogoWhatsapp className='wpp_icon'/>
     </a>
   )
