@@ -36,8 +36,9 @@
       font-family: $font;
       font-weight: $rg;
       color: $cor-primaria;
-      scrollbar-width: thin;
-      scrollbar-color: #ffffff;
+      &::-webkit-scrollbar-track {
+        height: 5px !important;
+      }
       &::-webkit-scrollbar {
         width: 2px;
         background-color: #e3e0d6;
@@ -86,8 +87,9 @@
       font-family: $font;
       font-weight: $rg;
       color: $cor-primaria;
-      scrollbar-width: thin;
-      scrollbar-color: $cor-cinza;
+      &::-webkit-scrollbar-track {
+        height: 5px !important;
+      }
       &::-webkit-scrollbar {
         width: 2px;
       }
