@@ -19,6 +19,7 @@
       right: 0;
       opacity: 0.5;
       position: absolute;
+      z-index: 0;
     }
   }
   .serv-txt-container {
@@ -29,6 +30,7 @@
     justify-content: center;
     padding: 5%;
     width: 50%;
+    z-index: 1;
     h2 {
       margin: 0;
       font-family: $font;
@@ -50,7 +52,7 @@
       }
       &::-webkit-scrollbar {
         width: 2px;
-        background-color: $cor-cinza;
+        background-color: darkslategrey;
       }
       &::-webkit-scrollbar-track {
         background-color: #ffffff;
@@ -80,6 +82,7 @@
       border-left-color: $cor-secundaria;
       opacity: 0.5;
       position: absolute;
+      z-index: 0;
     }
   }
   .serv-txt-container {
@@ -89,6 +92,7 @@
     justify-content: center;
     padding: 5%;
     width: 50%;
+    z-index: 1;
     h2 {
       margin: 0;
       font-family: $font;
@@ -110,7 +114,7 @@
       }
       &::-webkit-scrollbar {
         width: 2px;
-        background-color: $cor-branca;
+        background-color: white;
       }
       &::-webkit-scrollbar-track {
         background-color: $cor-cinza;
