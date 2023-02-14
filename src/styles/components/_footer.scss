@@ -64,9 +64,23 @@
         font-weight: $rg;
         color: $cor-branca;
         font-size: $tamanho-do-texto / 2.8;
+        position: relative;
+        i {
+          font-size: $tamanho-do-texto / 4;
+          top: 70%;
+          left: 8%;
+          position: absolute;
+          opacity: 0.3;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            opacity: 1;
+          }
+        }
         .ico-footer {
           color: $cor-secundaria;
           font-size: $tamanho-do-texto / 2;
+          margin: 0 5px 0 0;
         }
       }
     }

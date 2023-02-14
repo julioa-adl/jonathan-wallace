@@ -6,7 +6,7 @@ import { BsTelephone } from "react-icons/bs";
 function TopBar() {
   return (
     <div className='my-topBar'>
-      <div>
+      <div className='telefone'>
         <BsTelephone className='icon-top phone'/>
         <p>+351 927 082 012</p>
       </div>
