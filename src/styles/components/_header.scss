@@ -31,10 +31,11 @@
   }
   .txt-container-header {
     position: absolute;
-    height: 100%;
-    top: 0;
+    height: calc(100% - (100px + 30px + 20px));
+    top: (100px + 30px + 20px);
     display: flex;
     flex-direction: column;
+    overflow: hidden !important;
     justify-content: center;
     width: 80%;
     margin: 0 10%;
@@ -68,6 +69,8 @@
 @media screen and (max-width: $xl) {
   .header {
     .txt-container-header {
+      height: calc(100% - (100px + 30px - 16px));
+      top: (100px + 30px - 16px);
       .header-title {
         font-size: $tamanho-do-texto + 1;
       }
@@ -103,6 +106,15 @@
       .header-subtitle {
         font-size: ($tamanho-do-texto - 1) / 3;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .header {
+    .txt-container-header {
+      height: calc(100% - (100px + 30px - 32px));
+      top: (100px + 30px - 32px);
     }
   }
 }

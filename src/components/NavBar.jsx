@@ -39,7 +39,7 @@ function NavBar() {
     >
       <Container fluid>
         <Nav className="justify-content-start flex-grow-1">
-          <Navbar.Brand href="#">
+          <Navbar.Brand as={ Link } to={ '/' }>
             <img
               src={ logo }
               width="150"

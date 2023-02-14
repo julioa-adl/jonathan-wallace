@@ -7,6 +7,7 @@ import FormContacto from './contactos.components/FormContacto';
 import InfoContactos from './contactos.components/InfoContactos';
 import FaleConosco from '../../components/FaleConosco';
 import Footer from '../../components/Footer';
+import Whatsapp from '../../components/Whatsapp';
 
 function Contactos() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function Contactos() {
         <FormContacto/>
       </section>
       <FaleConosco/>
+      <Whatsapp/>
       <Footer/>
     </div>
   )

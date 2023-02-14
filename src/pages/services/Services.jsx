@@ -9,6 +9,7 @@ import TitleServices from './services-components/TitleServices';
 import CardServices from './services-components/CardServices';
 import FaleConosco from '../../components/FaleConosco';
 import Footer from '../../components/Footer';
+import Whatsapp from '../../components/Whatsapp';
 
 
 function Services({ match }) {
@@ -52,6 +53,7 @@ function Services({ match }) {
       <br/>
       <br/>
       <FaleConosco/>
+      <Whatsapp/>
       <Footer/>
     </div>
   )

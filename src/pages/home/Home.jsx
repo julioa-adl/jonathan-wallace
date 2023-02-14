@@ -4,6 +4,7 @@ import Depoimentos from '../../components/Depoimentos';
 import FaleConosco from '../../components/FaleConosco';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import Whatsapp from '../../components/Whatsapp';
 
 import bgHeaderHome from '../../images/bg-header-home.webp'
 import AboutMe from './home-components/AboutMe';
@@ -32,6 +33,7 @@ function Home() {
         <FaleConosco/>
         <Depoimentos/>
         <Clientes/>
+        <Whatsapp/>
         <Footer/>
       </section>
     </div>

@@ -1,0 +1,55 @@
+@import '../abstract/variaveis';
+
+.whatsapp {
+  position: fixed;
+  color: #00FF00;
+  font-size: 3em;
+  bottom: 30px;
+  right: 10px;
+  z-index: 3;
+  .wpp_icon {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation-iteration-count: 4;
+    transition-duration: 0.4s;
+    opacity: 0.5;
+    &:hover, &:active {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .whatsapp {
+    font-size: 2em;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .whatsapp {
+    font-size: 1.5em;
+    bottom: 50vh;
+    right: 5px;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
