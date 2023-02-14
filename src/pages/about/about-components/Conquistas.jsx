@@ -53,10 +53,9 @@ function Conquistas() {
 
   return (
     <div
-      ref={ ref }
       style={{ background: `url(${ bg_conquistas })` }}
       className='conquistas'>
-      <div>
+      <div ref={ ref }>
         <h1>{`${rIdade}`}</h1>
         <p>Anos de<br/>Experiência</p>
       </div>
