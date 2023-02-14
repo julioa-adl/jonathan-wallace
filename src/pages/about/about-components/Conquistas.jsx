@@ -30,7 +30,6 @@ function Conquistas() {
   }, [position, size]);
 
   const timing = 3000;
-  let timeoutId = null;
 
   const timingFunction = (time, valorFinal, setNum) => {
     let contagem = 0;
@@ -49,7 +48,6 @@ function Conquistas() {
       timingFunction(timing, obras, setObras);
       timingFunction(timing, acidentes, setAcidentes);
       timingFunction(timing, clientes, setClientes);
-      return () => clearTimeout(timeoutId);
     }
   }, [renderView]);
 

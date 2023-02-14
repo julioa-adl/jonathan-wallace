@@ -6,11 +6,20 @@
   flex-direction: row-reverse;
   width: 100%;
   .img-serv-card {
-    height: 100%;
+    height: 50vh;
     width: 50%;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
+    position: relative;
+    &::before {
+      content: "";
+      border: 25vh solid transparent;
+      border-right-color: $cor-secundaria;
+      right: 0;
+      opacity: 0.5;
+      position: absolute;
+    }
   }
   .serv-txt-container {
     background-color: $cor-cinza;
@@ -41,7 +50,7 @@
       }
       &::-webkit-scrollbar {
         width: 2px;
-        background-color: #e3e0d6;
+        background-color: $cor-cinza;
       }
       &::-webkit-scrollbar-track {
         background-color: #ffffff;
@@ -58,11 +67,20 @@
   display: flex;
   width: 100%;
   .img-serv-card {
-    height: 100%;
+    height: 50vh;
     width: 50%;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
+    position: relative;
+    &::before {
+      content: "";
+      left: 0;
+      border: 25vh solid transparent;
+      border-left-color: $cor-secundaria;
+      opacity: 0.5;
+      position: absolute;
+    }
   }
   .serv-txt-container {
     height: 100%;
@@ -92,6 +110,7 @@
       }
       &::-webkit-scrollbar {
         width: 2px;
+        background-color: $cor-branca;
       }
       &::-webkit-scrollbar-track {
         background-color: $cor-cinza;
@@ -106,6 +125,17 @@
 @media screen and (max-width: $lg) {
   .right-card {
     height: 40vh;
+    .img-serv-card {
+      height: 40vh;
+      &::before {
+        border: 20vh solid transparent;
+        content: "";
+        right: 0;
+        border-right-color: $cor-secundaria;
+        opacity: 0.2;
+        position: absolute;
+      }
+    }
     .serv-txt-container {
       padding: 2%;
       h2 {
@@ -126,6 +156,17 @@
   
   .left-card {
     height: 40vh;
+    .img-serv-card {
+      height: 40vh;
+      &::before {
+        border: 20vh solid transparent;
+        content: "";
+        left: 0;
+        border-left-color: $cor-secundaria;
+        opacity: 0.2;
+        position: absolute;
+      }
+    }
     .serv-txt-container {
       h2 {
         font-size: $tamanho-do-texto / 3;
@@ -143,3 +184,23 @@
     }
   }
 }
+
+// @media screen and (max-width: $sm) {
+//   .left-card {
+//     .img-serv-card {
+//       height: 50vh;
+//       width: 50%;
+//       background-position: center !important;
+//       background-size: cover !important;
+//       background-repeat: no-repeat !important;
+//       position: relative;
+//       &::before {
+//         content: "";
+//         left: 0;
+//         border: 25vh solid transparent;
+//         border-left-color: $cor-secundaria;
+//         opacity: 0.5;
+//         position: absolute;
+//       }
+//     }
+// }
