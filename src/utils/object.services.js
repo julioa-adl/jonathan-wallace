@@ -4,6 +4,7 @@ import capa_eletrica from '../images/img-services/eletrica.webp';
 import capa_hidraulica from '../images/img-services/hidraulica.webp';
 import capa_pintura from '../images/img-services/pintura.webp';
 import capa_drywall from '../images/img-services/drywall.webp';
+import capa_arcond from '../images/img-services/arcond.webp';
 
 import icon_manu from '../images/img-icon-service/manutencao.webp';
 import icon_remo from '../images/img-icon-service/remodelacao.webp';
@@ -11,6 +12,7 @@ import icon_ele from '../images/img-icon-service/eletrica.webp';
 import icon_hidra from '../images/img-icon-service/hidraulica.webp';
 import icon_pint from '../images/img-icon-service/pintura.webp';
 import icon_dry from '../images/img-icon-service/drywall.webp';
+import icon_arcond from '../images/img-icon-service/arcond.webp';
 
 
 const services = [
@@ -67,6 +69,15 @@ const services = [
     title: 'Drywall',
     resumo: 'Com uma equipe altamente capacitada, garantimos soluções de alta qualidade para a construção de paredes e tetos.',
     text: 'Os serviços de drywall são aplicados para a construção e instalação de paredes internas, divisórias e forros, oferecendo uma solução rápida e econômica para a necessidade de separação de ambientes e acústica. Nossa equipe é altamente qualificada e possui expertise em todas as etapas do processo, desde a preparação da superfície até a aplicação da massa corrida e pintura. Além disso, trabalhamos com materiais de alta qualidade e garantimos um acabamento perfeito e duradouro, tornando o ambiente mais funcional e agradável. O uso de drywall também é uma opção mais acessível e sustentável, pois permite a reutilização e reciclagem dos materiais usados.',
+  },
+  {
+    id: 6,
+    pathName: 'arcondicionado',
+    icon: icon_arcond,
+    cover: capa_arcond,
+    title: 'Ar-Condicionado',
+    resumo: 'Serviços completos para seu ar-condicionado: Instalação, Limpeza e Manutenção.',
+    text: 'A limpeza e manutenção de ar condicionados é essencial para garantir o bom funcionamento e prolongar a vida útil do equipamento. Além disso, um ar condicionado limpo pode contribuir para uma melhoria da qualidade do ar interior e reduzir os custos de energia. Nossos serviços incluem a limpeza completa do equipamento, a troca de filtros e a verificação do funcionamento geral do sistema, garantindo que ele esteja em pleno funcionamento. Nossa equipe técnica altamente qualificada realiza esses serviços com eficiência e rapidez, garantindo a satisfação dos nossos clientes.',
   },
 ];
 
