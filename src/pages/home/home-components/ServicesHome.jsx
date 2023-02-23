@@ -12,16 +12,19 @@ function ServicesHome() {
         {
           services.map((serv) => (
             <div key={`servhome${ serv.id }`}>
-              <div className='capa-card-serv-home-container'>
-                <div
-                  className='capa-card-serv-home'
-                  style={{
-                    background: `url(${ serv.cover })`
-                  }}
-                />
-              </div>
-              <div className='infos-card-serv-home'>
-                <Link to={ `/servicos/${serv.pathName}` } className='link-serv-home'>
+              <Link
+                to={ `/servicos/${serv.pathName}` }
+                className='link-serv-home'
+              >
+                <div className='capa-card-serv-home-container'>
+                  <div
+                    className='capa-card-serv-home'
+                    style={{
+                      background: `url(${ serv.cover })`
+                    }}
+                  />
+                </div>
+                <div className='infos-card-serv-home'>
                   <div className='div-icon-card-serv-home'>
                     <img className='icon-card-serv-home' alt={ `ico${ serv.title }` } src={ serv.icon }/>
                   </div>
@@ -29,8 +32,8 @@ function ServicesHome() {
                     <h1>{ serv.title }</h1>
                     <p>{ serv.resumo }</p>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           ))
         }

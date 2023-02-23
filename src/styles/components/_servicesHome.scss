@@ -22,15 +22,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:hover .infos-card-serv-home .txt-infos-card-home h1 {
+        color: $cor-secundaria;
+      }
+      &:hover .capa-card-serv-home-container .capa-card-serv-home,
+      &:focus .capa-card-serv-home-container .capa-card-serv-home {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
     div {
       .capa-card-serv-home-container {
         overflow: hidden;
         height: 278px;
         width: 100% / 3;
-        &:hover .capa-card-serv-home,
-        &:focus .capa-card-serv-home {
-          transform: scale(1.2);
-        }
         .capa-card-serv-home {
           height: 100%;
           width: 100%;
@@ -45,37 +55,28 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-          a {
-            font-style: none;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            .icon-card-serv-home {
-              width: 100%;
-            }
-            .txt-infos-card-home {
-              h1 {
-                font-family: $font;
-                transition: all 0.5s;
-                font-weight: $sb;
-                font-size: $tamanho-do-texto / 2.5;
-                color: $cor-primaria;
-                text-align: center;
-              }
-              p {
-                font-family: $font;
-                transition: all 0.5s;
-                font-weight: $rg;
-                color: $cor-primaria;
-                font-size: $tamanho-do-texto / 3.5;
-                text-align: left;
-                margin-left: 10%;
-              }
-              &:hover h1 {
-                color: $cor-secundaria;
-              }
-            }
+        .icon-card-serv-home {
+          width: 100%;
+        }
+        .txt-infos-card-home {
+          h1 {
+            font-family: $font;
+            transition: all 0.5s;
+            font-weight: $sb;
+            font-size: $tamanho-do-texto / 2.5;
+            color: $cor-primaria;
+            text-align: center;
           }
+          p {
+            font-family: $font;
+            transition: all 0.5s;
+            font-weight: $rg;
+            color: $cor-primaria;
+            font-size: $tamanho-do-texto / 3.5;
+            text-align: left;
+            margin-left: 10%;
+          }
+        }
       }
     }
   }
