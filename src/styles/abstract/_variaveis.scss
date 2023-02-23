@@ -30,3 +30,14 @@ $xxl: 1400px;
 // Margins
 $maior-lg: 10vw;
 $menor-lg: 2vw;
+
+@keyframes setinha {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+$anime-setinha: setinha 0.5s infinite alternate ease-in-out;

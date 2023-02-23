@@ -22,16 +22,19 @@
     }
   }
   .btn-fale-conosco {
-      width: 200px;
-      background-color: $cor-primaria;
-      border: $cor-primaria solid 1px;
-      color: $cor-branca;
-      font-family: $font;
-      font-weight: $md;
-      &:hover {
-        background-color: $cor-branca;
-        color: $cor-primaria;
-        font-weight: $rg !important;
+    width: 200px;
+    background-color: $cor-primaria;
+    border: $cor-primaria solid 1px;
+    color: $cor-branca;
+    font-family: $font;
+    font-weight: $md;
+    &:hover {
+      background-color: $cor-branca;
+      color: $cor-primaria;
+      font-weight: $rg !important;
+    }
+    &:hover .seta {
+      animation: $anime-setinha;
     }
   }
 }

@@ -61,6 +61,11 @@
         background-color: gray;
       }
     }
+    div a {
+      &:hover .seta {
+        animation: $anime-setinha;
+      }
+    }
   }
 }
 
@@ -121,6 +126,11 @@
       }
       &::-webkit-scrollbar-thumb {
         background-color: gray;
+      }
+    }
+    div a {
+      &:hover .seta {
+        animation: $anime-setinha;
       }
     }
   }

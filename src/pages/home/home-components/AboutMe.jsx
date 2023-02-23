@@ -43,7 +43,7 @@ function AboutMe() {
               </p>
               <Button
                 as={ Link } to={'/sobre'}
-                className='btn-saber-mais' variant="info">Saber mais <BsArrowRight/>
+                className='btn-saber-mais' variant="info">Saber mais <BsArrowRight className='seta'/>
               </Button>
             </div>
           </>
