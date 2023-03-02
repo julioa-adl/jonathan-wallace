@@ -9,7 +9,7 @@ function InfoContactos() {
     <div className='infoscontactos'>
       <h2>Informações de Contacto</h2>
       <span><MdEmail className='ico-contactos'/>- jonata.wallace@gmail.com</span>
-      <span><MdPhoneIphone className='ico-contactos'/>- +351 927 082 012</span>
+      <span className='tel-contacto'><MdPhoneIphone className='ico-contactos'/>- +351 927 082 012</span>
       <span><MdLocationOn className='ico-contactos'/>- Lisboa - Portugal</span>
     </div>
   )
