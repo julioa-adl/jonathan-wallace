@@ -16,8 +16,6 @@ function Clientes() {
       spaceBetween={50}
       slidesPerView={4}
       autoplay={true}
-      // onSlideChange={() => console.log('slide change')}
-      // onSwiper={(swiper) => console.log(swiper)}
       >
         {
           logo_clients.keys().map((logo, i) => (

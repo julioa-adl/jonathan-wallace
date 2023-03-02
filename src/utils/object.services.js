@@ -14,6 +14,13 @@ import icon_pint from '../images/img-icon-service/pintura.webp';
 import icon_dry from '../images/img-icon-service/drywall.webp';
 import icon_arcond from '../images/img-icon-service/arcond.webp';
 
+const arcond = require.context('../images/img-services/arcond', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const drywall = require.context('../images/img-services/drywall', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const eletrica = require.context('../images/img-services/eletrica', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const hidraulica = require.context('../images/img-services/hidraulica', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const manutencao = require.context('../images/img-services/manutencao', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const pintura = require.context('../images/img-services/pintura', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const remodelacao = require.context('../images/img-services/remodelacao', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
 
 const services = [
   {
@@ -24,6 +31,8 @@ const services = [
     title: 'Trabalhos em Altura',
     resumo: 'Fornecemos serviços especializados em trabalhos em altura com a máxima segurança.',
     text: 'Os trabalhos em altura são realizados com a utilização de equipamentos especializados e profissionais capacitados, garantindo assim a segurança dos envolvidos. Antes de iniciar o serviço, é realizada uma análise do local e das condições, para planejar e executar a atividade de maneira eficiente e segura. Durante o processo, são adotadas medidas de segurança rigorosas para garantir a integridade física dos profissionais envolvidos e do próprio imóvel. Ao finalizar, é feita uma avaliação para assegurar que tudo foi executado com perfeição e de acordo com as especificações. A Jonathan Manutenção prioriza sempre a qualidade e a segurança em todos os seus trabalhos, especialmente em altura.',
+    servicos: [],
+    images: manutencao,
   },
   {
     id: 1,
@@ -33,6 +42,8 @@ const services = [
     title: 'Remodelação',
     resumo: 'Oferecemos soluções profissionais para remodelação e restauração de imóveis.',
     text: 'A Jonathan Manutenção oferece serviços de remodelação para melhorar e atualizar sua casa ou escritório. Nós trabalhamos com você para entender suas necessidades e criar soluções que atendam aos seus objetivos e desejos. Nossa equipe altamente qualificada é capaz de lidar com projetos grandes e pequenos, incluindo reformas de banheiros, cozinhas, quartos e salas. Além disso, garantimos a máxima precisão, eficiência e atenção aos detalhes em cada trabalho que realizamos. Se você está buscando renovar sua casa ou escritório, não hesite em entrar em contato com a Jonathan Manutenção.',
+    servicos: [],
+    images: remodelacao,
   },
   {
     id: 2,
@@ -41,7 +52,18 @@ const services = [
     cover: capa_eletrica,
     title: 'Serviços Elétricos',
     resumo: 'Oferecemos serviços elétricos confiáveis e eficientes para atender às suas necessidades.',
-    text: 'Os serviços elétricos da Jonathan Manutenção são realizados por profissionais altamente capacitados e experientes na área. Nós nos comprometemos em garantir a segurança de nossos clientes e de nossos funcionários, aplicando as normas e regulamentos elétricos necessários em cada projeto. Desde a instalação de novos sistemas elétricos até a manutenção e conserto de sistemas existentes, nós oferecemos soluções eficientes e confiáveis para atender às necessidades de nossos clientes. Além disso, nosso departamento de atendimento ao cliente está disponível 24 horas por dia, 7 dias por semana, para garantir suporte contínuo a nossos clientes.',
+    text: 'Os serviços elétricos da Jonathan Manutenção são realizados por profissionais altamente capacitados e experientes na área. Nós nos comprometemos em garantir a segurança de nossos clientes e de nossos funcionários, aplicando as normas e regulamentos elétricos necessários em cada projeto.',
+    servicos: [
+      "Instalação de novos pontos de energia",
+      "Reparo de fios e cabos elétricos",
+      "Substituição de disjuntores e fusíveis",
+      "Instalação e manutenção de quadros elétricos",
+      "Instalação de tomadas e interruptores",
+      "Instalação e manutenção de iluminação",
+      "Inspeção e manutenção de sistemas elétricos",
+      "Projetos elétricos para residências e empresas",
+    ],
+    images: eletrica,
   },
   {
     id: 3,
@@ -50,7 +72,16 @@ const services = [
     cover: capa_hidraulica,
     title: 'Serviços Hidráulicos',
     resumo: 'Soluções de alta qualidade para todas as suas necessidades hidráulicas.',
-    text: 'Os serviços hidráulicos oferecidos pela Jonathan Manutenção são realizados por profissionais altamente capacitados e experientes na área. Eles possuem conhecimento sobre as normas e procedimentos necessários para garantir a eficiência e segurança nas instalações hidráulicas. Desde o projeto até a execução, a equipe segue rigorosamente todas as recomendações e padrões para realizar um trabalho de qualidade e garantir a satisfação dos clientes. Entre os serviços hidráulicos oferecidos estão a instalação de sistemas de água, esgoto e gás, reparos e manutenções em instalações hidráulicas existentes, entre outros.',
+    text: 'Os serviços hidráulicos oferecidos pela Jonathan Manutenção são realizados por profissionais altamente capacitados e experientes na área.',
+    servicos: [
+      "Detecção e reparo de vazamentos",
+      "Instalação de tubulações de água quente e fria",
+      "Instalação e manutenção de torneiras, chuveiros e válvulas",
+      "Reparo e substituição de encanamentos",
+      "Limpeza e desentupimento de canos e ralos",
+      "Instalação e manutenção de sistemas de esgoto e drenagem",
+    ],
+    images: hidraulica,
   },
   {
     id: 4,
@@ -59,7 +90,20 @@ const services = [
     cover: capa_pintura,
     title: 'Pintura',
     resumo: 'Oferecemos soluções de alta qualidade e acabamentos impecáveis para renovar qualquer ambiente.',
-    text: 'Oferecemos soluções de alta qualidade e acabamentos impecáveis para renovar qualquer ambiente. Antes de iniciar o trabalho, nossa equipe realiza uma avaliação detalhada do local, verificando as condições da superfície a ser pintada, identificando eventuais problemas e elaborando um plano de trabalho específico para cada caso. Em seguida, procedemos à limpeza e preparação da superfície, aplicando as tintas selecionadas de acordo com as necessidades de cada projeto, garantindo assim uma pintura de qualidade e duradoura. Além disso, utilizamos materiais e equipamentos de última geração, garantindo um trabalho preciso e eficiente.',
+    text: 'Oferecemos soluções de alta qualidade e acabamentos impecáveis para renovar qualquer ambiente.',
+    servicos: [
+      'Pintura de interiores',
+      'Pintura de exteriores',
+      'Pintura de fachadas',
+      'Pintura de tetos e paredes',
+      'Pintura de portas e janelas',
+      'Texturização de paredes',
+      'Aplicação de verniz',
+      'Pintura de grades e portões',
+      'Pintura de piso',
+      'Pintura de estacionamento',
+    ],
+    images: pintura,
   },
   {
     id: 5,
@@ -68,7 +112,9 @@ const services = [
     cover: capa_drywall,
     title: 'Drywall',
     resumo: 'Com uma equipe altamente capacitada, garantimos soluções de alta qualidade para a construção de paredes e tetos.',
-    text: 'Os serviços de drywall são aplicados para a construção e instalação de paredes internas, divisórias e forros, oferecendo uma solução rápida e econômica para a necessidade de separação de ambientes e acústica. Nossa equipe é altamente qualificada e possui expertise em todas as etapas do processo, desde a preparação da superfície até a aplicação da massa corrida e pintura. Além disso, trabalhamos com materiais de alta qualidade e garantimos um acabamento perfeito e duradouro, tornando o ambiente mais funcional e agradável. O uso de drywall também é uma opção mais acessível e sustentável, pois permite a reutilização e reciclagem dos materiais usados.',
+    text: 'Os serviços de drywall são aplicados para a construção e instalação de paredes internas, divisórias e forros, oferecendo uma solução rápida e econômica para a necessidade de separação de ambientes e acústica. O uso de drywall também é uma opção mais acessível e sustentável, pois permite a reutilização e reciclagem dos materiais usados.',
+    servicos: [],
+    images: drywall,
   },
   {
     id: 6,
@@ -77,7 +123,18 @@ const services = [
     cover: capa_arcond,
     title: 'Ar-Condicionado',
     resumo: 'Serviços completos para seu ar-condicionado: Instalação, Limpeza e Manutenção.',
-    text: 'A limpeza e manutenção de ar condicionados é essencial para garantir o bom funcionamento e prolongar a vida útil do equipamento. Além disso, um ar condicionado limpo pode contribuir para uma melhoria da qualidade do ar interior e reduzir os custos de energia. Nossos serviços incluem a limpeza completa do equipamento, a troca de filtros e a verificação do funcionamento geral do sistema, garantindo que ele esteja em pleno funcionamento. Nossa equipe técnica altamente qualificada realiza esses serviços com eficiência e rapidez, garantindo a satisfação dos nossos clientes.',
+    text: 'A limpeza e manutenção de ar condicionados é essencial para garantir o bom funcionamento e prolongar a vida útil do equipamento.',
+    servicos: [
+      "Limpeza dos filtros",
+      "Limpeza dos componentes internos",
+      "Verificação do funcionamento geral do aparelho",
+      "Troca de peças danificadas",
+      "Recarga de gás refrigerante",
+      "Instalação de novos aparelhos",
+      "Remoção e descarte de aparelhos antigos",
+      "Manutenção preventiva periódica",
+    ],
+    images: arcond,
   },
 ];
 

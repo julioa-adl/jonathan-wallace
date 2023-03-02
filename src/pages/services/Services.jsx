@@ -44,8 +44,9 @@ function Services({ match }) {
             key={`servCardPage${ i }`}
             idN={ s.pathName }
             cn={ i % 2 === 0 ? 'right-card' : 'left-card'}
-            img={ s.cover }
+            album={ s.images }
             title={ s.title }
+            servList={ s.servicos }
             description={ s.text }
           />
         ))
