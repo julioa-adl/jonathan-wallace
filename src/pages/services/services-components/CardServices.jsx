@@ -43,16 +43,18 @@ function CardServices({ album, title, description, cn, idN, servList }) {
       <div className='serv-txt-container'>
         <h2>{ title }</h2>
         <hr/>
-        <p>
+        <div className='p-services'>
           { description }
           <ul>
             {
               servList.map((serv, i) => (
-                <li key={`list-serv-${title}-${i}`}>{`- ${ serv }`}</li>
+                serv ? (
+                  <li key={`list-serv-${title}-${i}`}>{`- ${ serv }`}</li>
+                ) : ''
               ))
             }
           </ul>
-        </p>
+        </div>
         <div>
           <Button variant="outline-primary" size="sm"
             href='https://api.whatsapp.com/send?phone=351927082012&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento'

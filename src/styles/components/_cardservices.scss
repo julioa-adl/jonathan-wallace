@@ -51,11 +51,13 @@
       border: 2px solid $cor-secundaria;
       opacity: 1;
     }
-    p {
+    .p-services {
       padding-right: 5px;
+      margin: 10px 0;
       font-family: $font;
       font-weight: $rg;
       color: $cor-primaria;
+      overflow-y: auto;
       &::-webkit-scrollbar-track {
         height: 5px !important;
       }
@@ -134,11 +136,13 @@
       border: 2px solid $cor-secundaria;
       opacity: 1;
     }
-    p {
+    .p-services {
       padding-right: 5px;
+      margin: 10px 0;
       font-family: $font;
       font-weight: $rg;
       color: $cor-primaria;
+      overflow-y: auto;
       &::-webkit-scrollbar-track {
         height: 5px !important;
       }
@@ -191,10 +195,9 @@
         width: 100px;
         border: 1.8px solid $cor-secundaria;
       }
-      p {
+      .p-services {
         font-size: $tamanho-do-texto / 4;
         text-align: justify;
-        overflow-y: auto;
         overflow-x: hidden;
         ul {
           text-align: left;
@@ -224,10 +227,9 @@
         width: 100px;
         border: 1.8px solid $cor-secundaria;
       }
-      p {
+      .p-services {
         font-size: $tamanho-do-texto / 4;
         text-align: justify;
-        overflow-y: auto;
         overflow-x: hidden;
         ul {
           text-align: left;
