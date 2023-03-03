@@ -23,7 +23,6 @@
   }
   .telefone {
     position: relative;
-    cursor: pointer;
     &::before {
       opacity: 0;
       transition: all 0.3s ease-in-out;
@@ -38,18 +37,7 @@
       top: 115%;
       z-index: 2000;
     }
-    &::after {
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-      content: "";
-      border: 6px solid transparent;
-      border-bottom-color: white;
-      left: 10px;
-      top: 65%;
-      position: absolute;
-      z-index: 2001;
-    }
-    &:hover:after, &:hover:before {
+    &:hover:before {
       opacity: 0.8;
     }
   }
